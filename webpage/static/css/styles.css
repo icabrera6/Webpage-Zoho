@@ -226,3 +226,19 @@ button:hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline;
 }
+
+.confirmation-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.confirmation-message.success {
+    color: #4caf50; /* Green for success */
+}
+
+.confirmation-message.error {
+    color: #f44336; /* Red for error */
+}
