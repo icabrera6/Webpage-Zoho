@@ -19,5 +19,8 @@ def submit():
     # ...additional validation logic if needed...
     return jsonify({'success': True, 'message': 'Formulario enviado correctamente'})
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# Punto de entrada para Vercel
+def handler(event, context):
+    from flask_lambda import FlaskLambda
+    lambda_app = FlaskLambda(app)
+    return lambda_app(event, context)
