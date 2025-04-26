@@ -20,7 +20,5 @@ def submit():
     return jsonify({'success': True, 'message': 'Formulario enviado correctamente'})
 
 # Punto de entrada para Vercel
-def handler(event, context):
-    from flask_lambda import FlaskLambda
-    lambda_app = FlaskLambda(app)
-    return lambda_app(event, context)
+if __name__ == "__main__":
+    app.run()
